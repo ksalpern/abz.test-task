@@ -1,10 +1,14 @@
 .radioButton {
+ display: flex;
+ align-items: end;
 
   input:focus~label,
   input:valid~label {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
+    padding-left: 32px;
+    padding-bottom: 7px;
   }
 }
 
@@ -30,7 +34,7 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 0;
+  top: 4px;
   width: 18px;
   height: 18px;
   border: 1px solid #D0CFCF;
@@ -49,7 +53,7 @@
   height: 12px;
   background: var(--secondaryBlue);
   position: absolute;
-  top: 4px;
+  top: 8px;
   left: 4px;
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;

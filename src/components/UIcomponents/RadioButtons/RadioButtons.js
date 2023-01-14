@@ -19,6 +19,7 @@ const RadioButtons = () => {
 
   return (
     <div className='radioButtons'>
+      <p>Select your position</p>
       {positions.map(position => (
         <RadioButton key={position.id} position={position} />
       ))}

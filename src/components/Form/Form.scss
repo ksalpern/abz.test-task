@@ -1,6 +1,11 @@
 .form {
   margin-bottom: 100px;
-  display: flex;
+  // display: flex;
+  .container{
+    // display: flex;
+    // flex-direction: column;
+    // align-content: center;
+  }
 
   form {
     display: flex;
@@ -9,6 +14,7 @@
     align-items: center;
     width: 100%;
     max-width: 380px;
+    margin: 0 auto;
   }
 
 }
