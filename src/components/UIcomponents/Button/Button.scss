@@ -1,0 +1,23 @@
+// custom buttons styles
+.btn {
+  background: var(--mainYellow);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  max-width: 120px;
+  cursor: pointer;
+  border: 0;
+  padding: 4px 18px;
+}
+
+.btn:hover {
+  background: var(--hoverYellow);
+}
+
+.btn.disabled {
+  background: var(--disabledButton);
+  color: rgba(255, 255, 255, 0.87);
+}

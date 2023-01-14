@@ -1,8 +1,10 @@
+import Header from "./components/Header/Header";
+import './variables.scss'
 
 function App() {
   return (
     <div className="app">
-      APP
+      <Header />
     </div>
   );
 }

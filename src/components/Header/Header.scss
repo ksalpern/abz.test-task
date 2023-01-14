@@ -1,0 +1,19 @@
+.header {
+  background-color: #FFFFFF;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+}
