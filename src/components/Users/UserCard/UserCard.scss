@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--whiteText);
+  border-radius: 10px;
 
   .userImg {
     width: 70px;
@@ -16,6 +17,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
   }
 }
 
@@ -27,16 +29,19 @@
 
 @media (min-width: 768px) {
   .userCard{
-    width: 50%;
+    max-width: 344px;
   }
 }
 
 @media (min-width: 1024px) {
   .userCard{
-    width: 30%;
+    max-width: 282px;
   }
 }
 
-@media (min-width: 1024px) {}
-
-@media (min-width: 1170px) {}
+@media (min-width: 1170px) {
+  .userCard{
+    max-width: 370px;
+    
+  }
+}
