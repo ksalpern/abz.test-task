@@ -5,11 +5,13 @@
   display: flex;
   justify-content: center;
   padding-top: 40px;
+  padding-bottom: 20px;
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 380px;
     // justify-content: center;
     // padding-top: 0;
     gap: 21px 4px;
@@ -19,7 +21,7 @@
     color: var(--whiteText);
   }
 
-  .btn{
+  .btn {
     margin-top: 11px;
   }
 }
@@ -30,14 +32,23 @@
   }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .banner {
+    padding-top: 89px;
+
+    .container {
+      padding: 0;
+    }
+  }
+}
 
 @media (min-width: 1024px) {
   .banner {
+    padding-top: 164px;
     min-height: 650px;
   }
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1170px) {
 
-@media (min-width: 1170px) {}
+}
