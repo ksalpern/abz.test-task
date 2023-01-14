@@ -1,0 +1,42 @@
+.userCard {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--whiteText);
+
+  .userImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .userName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 320px) {
+  .userCard{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .userCard{
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .userCard{
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1170px) {}
