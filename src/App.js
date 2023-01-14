@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Users from "./components/Users/Users";
 import './variables.scss'
 import axios from "axios";
+import Form from "./components/Form/Form";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -13,7 +14,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=5`
+        `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
       )
       .then((res) => {
         console.log(res.data.users);
@@ -43,6 +44,7 @@ function App() {
       <Header />
       <Banner />
       <Users users={users} />
+      <Form />
     </div>
   );
 }

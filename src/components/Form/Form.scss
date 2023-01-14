@@ -1,0 +1,22 @@
+.form {
+
+  // background-color: rgba(255, 0, 0, 0.311);
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--defaultGap);
+    align-items: center;
+  }
+
+  button {
+    // margin-top: var(--defaultGap);
+  }
+}
+
+@media (min-width: 320px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1170px) {}

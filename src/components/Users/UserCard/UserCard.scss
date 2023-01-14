@@ -13,7 +13,11 @@
     border-radius: 50%;
   }
 
-  .userName {
+  .userInfo {
+    width: 100%;
+  }
+
+  p {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -22,26 +26,26 @@
 }
 
 @media (min-width: 320px) {
-  .userCard{
+  .userCard {
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .userCard{
+  .userCard {
     max-width: 344px;
   }
 }
 
 @media (min-width: 1024px) {
-  .userCard{
+  .userCard {
     max-width: 282px;
   }
 }
 
 @media (min-width: 1170px) {
-  .userCard{
+  .userCard {
     max-width: 370px;
-    
+
   }
 }

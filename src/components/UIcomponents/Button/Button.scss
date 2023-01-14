@@ -20,4 +20,8 @@
 .btn.disabled {
   background: var(--disabledButton);
   color: rgba(255, 255, 255, 0.87);
+  pointer-events: none;
+  a{
+    color: inherit;
+  }
 }

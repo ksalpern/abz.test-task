@@ -5,7 +5,7 @@ import './Users.scss'
 
 const Users = ({ users }) => {
   return (
-    <div className='users'>
+    <div id='users' className='users'>
       <div className="container">
         <h2>Working with GET request</h2>
         <div className="users__items">
