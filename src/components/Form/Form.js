@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../UIcomponents/Button/Button'
 import Input from '../UIcomponents/Input/Input'
+import RadioButtons from '../UIcomponents/RadioButtons/RadioButtons'
 import UploadImage from '../UIcomponents/UploadImage/UploadImage'
 import './Form.scss'
 
@@ -13,6 +14,7 @@ const Form = () => {
           <Input inputLabel='Your name' inputClass='' />
           <Input inputLabel='Email' inputClass='' />
           <Input inputLabel='Phone' inputClass='' inputHelperText='+38 (XXX) XXX - XX - XX' />
+          <RadioButtons />
           <UploadImage />
           <Button buttonType='submit' buttonText='Sign up' buttonClass='btn disabled' buttonLink='#' />
         </form>

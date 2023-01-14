@@ -18,10 +18,15 @@
 
   &__btn {
     min-width: 83px;
+    height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.87);
     border-radius: 4px 0px 0px 4px;
-    padding: 14px 15px;
+    padding: 13px 15px;
     margin-right: 16px;
+  }
+
+  input {
+    padding: 0;
   }
 
   input[type="file"] {
