@@ -1,0 +1,46 @@
+.upload {
+  display: flex;
+  align-items: center;
+  border: 1px solid #D0CFCF;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  max-height: 54px;
+  resize: none;
+  cursor: pointer;
+  pointer-events: auto;
+
+  &__btn {
+    min-width: 83px;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    border-radius: 4px 0px 0px 4px;
+    padding: 14px 15px;
+    margin-right: 16px;
+  }
+
+  input[type="file"] {
+    cursor: pointer !important;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .fileName {
+    color: var(--blackText);
+  }
+
+  .noFileUpload {
+    color: #7E7E7E;
+  }
+}
