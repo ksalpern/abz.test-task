@@ -1,0 +1,43 @@
+.banner {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/pexels-alexandr-podvalny-1227513.jpeg);
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    // padding-top: 0;
+    gap: 21px 4px;
+  }
+
+  p {
+    color: var(--whiteText);
+  }
+
+  .btn{
+    margin-top: 11px;
+  }
+}
+
+@media (min-width: 320px) {
+  .banner {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {
+  .banner {
+    min-height: 650px;
+  }
+}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1170px) {}
