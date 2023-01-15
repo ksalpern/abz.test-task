@@ -10,13 +10,9 @@ function App() {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
+  const [isLastPage, setIsLastPage] = useState(false)
 
   let total = Math.ceil(totalPages)
-  // if (total === currentPage) {
-  //   setIsLastPage(true)
-  // } else {
-  //   setIsLastPage(false)
-  // }
   console.log(total)
 
   const addOncklickUsers = (e) => {
@@ -31,6 +27,11 @@ function App() {
         setUsers(prev =>
           [...prev, ...res.data.users]);
       })
+    if (total === newPage) {
+      setIsLastPage(true)
+    } else {
+      setIsLastPage(false)
+    }
   };
 
   useEffect(() => {
@@ -54,7 +55,7 @@ function App() {
     <div className="app">
       <Header />
       <Banner />
-      <Users users={users} addOncklickUsers={addOncklickUsers} currentPage={currentPage} total={total} />
+      <Users users={users} addOncklickUsers={addOncklickUsers} isLastPage={isLastPage} />
       <Form />
     </div>
   );

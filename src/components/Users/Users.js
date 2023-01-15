@@ -4,17 +4,7 @@ import Loader from '../UIcomponents/Loader/Loader'
 import UserCard from './UserCard/UserCard'
 import './Users.scss'
 
-const Users = ({ users, addOncklickUsers, currentPage, total }) => {
-  const [isLastPage, setIsLastPage] = useState(false)
-
-  //  if (total === currentPage) {
-  //     setIsLastPage(true)
-  //   } else {
-  //     setIsLastPage(false)
-  //   }
-  console.log(typeof total)
-  console.log(typeof currentPage)
-  console.log(total === currentPage)
+const Users = ({ users, addOncklickUsers, isLastPage }) => {
 
   return (
     <div id='users' className='users'>
