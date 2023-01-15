@@ -8,10 +8,23 @@
   border-radius: 10px;
 
   .userImg {
+    background-image: url(../../../assets/photo-cover.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+
+    img {}
   }
+
+
 
   .userInfo {
     width: 100%;

@@ -7,11 +7,12 @@ const UserCard = ({
 }) => {
   return (
     <div className="userCard">
-      <img
-        className="userImg"
-        src={photo ? photo : userAvatar}
-        alt="user avatar"
-      />
+      <div className="userImg">
+        <img
+          src={photo ? photo : userAvatar}
+          alt=""
+        />
+      </div>
       <p className="userName">{name}</p>
       <div className="userInfo">
         <p>{position}</p>
