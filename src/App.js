@@ -8,42 +8,46 @@ import Form from "./components/Form/Form";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [page, setPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState();
 
+  const addOncklickUsers = (e) => {
+    // e.preventDefault()
+    const newPage = currentPage + 1
+    setCurrentPage(newPage)
+    axios
+      .get(
+        `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${newPage}&count=6`
+      )
+      .then((res) => {
+        console.log(res.data.users);
+        setUsers(prev =>
+          [...prev, ...res.data.users]);
+      })
+  };
 
   useEffect(() => {
     axios
       .get(
-        `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
+        `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${currentPage}&count=6`
       )
       .then((res) => {
-        // console.log(res.data.users);
+        console.log(res.data.users);
+        console.log(res.data);
         setUsers([...users, ...res.data.users]);
+
       })
 
-    // .catch(function (error) {
-    //   // handle error
-    //   console.log(error);
-    // })
-    // .finally(() => setFetching(false));
-    // fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users?page=1&count=5')
-    //   .then(function (response) {
-    //     return response.json();
-    //   }).then(function (data) {
-    //     console.log(data);
-    //     if (data.success) {
-    //       // process success response 
-    //     } else {
-    //       // proccess server errors 
-    //     }
-    //   })
+      .catch(function (error) {
+        console.log(error);
+      })
   }, []);
 
   return (
     <div className="app">
       <Header />
       <Banner />
-      <Users users={users} />
+      <Users users={users} addOncklickUsers={addOncklickUsers} />
       <Form />
     </div>
   );

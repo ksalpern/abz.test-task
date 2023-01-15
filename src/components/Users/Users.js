@@ -3,7 +3,7 @@ import Button from '../UIcomponents/Button/Button'
 import UserCard from './UserCard/UserCard'
 import './Users.scss'
 
-const Users = ({ users }) => {
+const Users = ({ users, addOncklickUsers }) => {
   return (
     <div id='users' className='users'>
       <div className="container">
@@ -13,7 +13,8 @@ const Users = ({ users }) => {
             <UserCard key={user.id} user={user} />
           ))}
         </div>
-        <Button buttonText='Show more' buttonClass='btn' buttonLink='#' />
+        {/* <Button buttonText='Show more' buttonClass='btn' buttonLink='' onClick={() => addOncklickUsers()}/> */}
+        <button className='btn'  onClick={() => addOncklickUsers()}>Show more</button>
       </div>
     </div>
   )

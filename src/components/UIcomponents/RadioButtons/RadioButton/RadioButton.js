@@ -4,7 +4,7 @@ import './RadioButton.scss'
 const RadioButton = ({ position: { id, name } }) => {
   return (
     <div className='radioButton'>
-      <input type="radio" checked required id={id} name="radio-group" />
+      <input type="radio" defaultChecked={true} required id={id} name="radio-group" />
       <label htmlFor={id}>{name}</label>
     </div>
   )
