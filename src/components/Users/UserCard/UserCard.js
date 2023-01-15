@@ -1,6 +1,7 @@
 import React from "react";
 import "./UserCard.scss";
 import userAvatar from "../../../assets/photo-cover.svg";
+import Tooltip from "../../UIcomponents/Tooltip/Tooltip";
 
 const UserCard = ({
   user: { id, name, email, phone, position, registration_timestamp, photo },
@@ -13,11 +14,19 @@ const UserCard = ({
           alt=""
         />
       </div>
-      <p className="userName">{name}</p>
+      <Tooltip title={name} position='bottom'>
+        <p className="userName">{name}</p>
+      </Tooltip>
       <div className="userInfo">
-        <p>{position}</p>
-        <p>{email}</p>
-        <p>{phone}</p>
+        <Tooltip title={position} position='bottom'>
+          <p>{position}</p>
+        </Tooltip>
+        <Tooltip title={email} position='bottom'>
+          <p>{email}</p>
+        </Tooltip>
+        <Tooltip title={phone} position='bottom'>
+          <p>{phone}</p>
+        </Tooltip>
       </div>
     </div>
   );
