@@ -11,7 +11,7 @@ const Form = () => {
   const [email, changeEmail] = useState('');
   const [phone, changePhone] = useState('');
   const [position, changePosition] = useState('Designer');
-  const [photo, changePhoto] = useState('');
+  const [photo, changePhoto] = useState({});
   const [error, setError] = useState(false);
 
   // const validateAndSubmitForm = (e) => {
@@ -32,6 +32,7 @@ const Form = () => {
 
   console.log(email)
   console.log(position)
+  console.log(photo)
   return (
     <div id='signUp' className='form'>
       <div className='container'>
