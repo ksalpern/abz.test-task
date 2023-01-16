@@ -13,7 +13,7 @@ function App() {
   const [isLastPage, setIsLastPage] = useState(false)
 
   let total = Math.ceil(totalPages)
-  console.log(total)
+  // console.log(total)
 
   const addOncklickUsers = (e) => {
     // e.preventDefault()
@@ -40,11 +40,11 @@ function App() {
         `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${currentPage}&count=6`
       )
       .then((res) => {
-        console.log(res.data.users);
-        console.log(res.data.total_users);
+        // console.log(res.data.users);
+        // console.log(res.data.total_users);
         setUsers([...users, ...res.data.users]);
         setTotalPages(res.data.total_users / 6)
-        console.log(totalPages)
+        // console.log(totalPages)
       })
       .catch(function (error) {
         console.log(error);

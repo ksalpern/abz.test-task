@@ -14,8 +14,9 @@ const RadioButtons = ({ onInputValueChange, inputValue }) => {
         `https://frontend-test-assignment-api.abz.agency/api/v1/positions`
       )
       .then((res) => {
-        // console.log(res.data.positions); 
         setPositions([...positions, ...res.data.positions]);
+        console.log(res.data.positions.id); 
+        console.log(res.data); 
       })
   }, []);
 
@@ -26,7 +27,6 @@ const RadioButtons = ({ onInputValueChange, inputValue }) => {
         // <RadioButton key={position.id} position={position} inputValue={position} onInputValueChange={changePosition} />
         <div key={position.id} className='radioButton'>
           <input type="radio"
-            // defaultChecked={true} 
             required 
             id={position.id} 
             name="radio-group"

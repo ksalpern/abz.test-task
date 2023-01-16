@@ -66,13 +66,41 @@ input:focus~span {
   transition: all 0.075s ease;
 }
 
-.input__helper {
+.input__helper,
+.input__error {
   position: absolute;
   left: 16px;
   bottom: -16px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #7E7E7E;
   pointer-events: none;
+}
+
+.input__helper {
+  color: #7E7E7E;
+}
+
+.input__error {
+  color: #CB3D40;
+  display: none;
+}
+
+.input__cover._error {
+
+  .input__cover label,
+  input:focus~label,
+  input:valid~label {
+    color: #CB3D40;
+  }
+
+  border: 2px solid #CB3D40;
+
+  .input__helper {
+    display: none;
+  }
+
+  .input__error {
+    display: block;
+  }
 }

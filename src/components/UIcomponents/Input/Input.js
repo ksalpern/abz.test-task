@@ -7,6 +7,7 @@ const Input = ({ inputClass, inputLabel, inputHelperText, onInputValueChange, in
       <input className={inputClass} type="text" required name="name" value={inputValue} onChange={(e) => onInputValueChange(e.target.value)} />
       <label>{inputLabel}</label>
       <span className="input__helper">{inputHelperText}</span>
+      <span className="input__error">{inputHelperText}</span>
     </div>
   )
 }

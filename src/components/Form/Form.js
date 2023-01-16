@@ -12,23 +12,27 @@ const Form = () => {
   const [phone, changePhone] = useState('');
   const [position, changePosition] = useState('Designer');
   const [photo, changePhoto] = useState({});
-  const [error, setError] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  // const validateAndSubmitForm = (e) => {
-    // e.preventDefault();
+  const isEmail = (email) =>
+  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
-    // const errors = {};
+  const validateAndSubmitForm = (e) => {
+    e.preventDefault();
 
-    // if (!isEmail(values.email)) {
-    //   errors.email = 'Wrong email';
-    // }
+    const errors = {};
 
-    // setErrors(errors);
+    if (!isEmail(email)) {
+      errors.email = 'Wrong email';
+    }
 
-    // if (!Object.keys(errors).length) {
-    //   alert(JSON.stringify(values, null, 2));
-    // }
-  // };
+    setErrors(errors);
+
+    if (!Object.keys(errors).length) {
+      alert(JSON.stringify(values, null, 2));
+    }
+  };
+
 
   console.log(email)
   console.log(position)
