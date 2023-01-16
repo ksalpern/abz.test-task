@@ -25,7 +25,13 @@ const RadioButtons = ({ onInputValueChange, inputValue }) => {
       {positions.map(position => (
         // <RadioButton key={position.id} position={position} inputValue={position} onInputValueChange={changePosition} />
         <div key={position.id} className='radioButton'>
-          <input type="radio" defaultChecked={true} required id={position.id} name="radio-group" value={inputValue} onChange={(e) => onInputValueChange(e.target.checked)} />
+          <input type="radio"
+            // defaultChecked={true} 
+            required 
+            id={position.id} 
+            name="radio-group"
+            checked={position.name === inputValue}
+            value={position.name} onChange={(e) => onInputValueChange(e.currentTarget.value)} />
           <label htmlFor={position.id}>{position.name}</label>
         </div>
       ))}
