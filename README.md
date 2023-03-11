@@ -1,3 +1,3 @@
 # Test Assignment
 
-Click [here](https://abz-test-assignment.netlify.app/) to see final result
+Click [here](https://abz-testcase.netlify.app/) to see final result
