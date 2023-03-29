@@ -10,8 +10,8 @@ const Header = () => {
         <nav>
           <a href="#"><img src={logo} alt="logo" /></a>
           <div className="header__buttons">
-            <Button buttonText='Users' buttonClass='btn' buttonLink='#users' />
-            <Button buttonText='Sign up' buttonClass='btn' buttonLink='#signUp' />
+            <Button buttonText='Users' buttonClass='btn' buttonLink='users' />
+            <Button buttonText='Sign up' buttonClass='btn' buttonLink='signUp' />
           </div>
         </nav>
       </div>

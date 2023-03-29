@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-scroll'
 import './Button.scss'
 
 const Button = ({ buttonLink, buttonClass, buttonText,buttonType }) => {
   return (
     <button type={buttonType} className={buttonClass}>
-      <a href={buttonLink}>{buttonText}</a>
+      <Link to={buttonLink} smooth={true}>{buttonText}</Link>
     </button>
   )
 }
